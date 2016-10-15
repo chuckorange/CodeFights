@@ -1,0 +1,23 @@
+int right_most_bit_1( int n )
+{
+  // n:
+  // 1010
+  // 2's complment:
+  // 0110
+  //&------------
+  // 0010
+  return n & (~n + 1);
+}
+
+int right_most_bit_0( int n )
+{
+  // n:
+  // 1010
+  // ~n:
+  // 0101 - find the right most 1 of ~n 
+  // 2's complment:
+  // 1011
+  //&------------
+  // 0001
+  return ~n & (n + 1);
+}
